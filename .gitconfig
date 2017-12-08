@@ -1,0 +1,9 @@
+[user]
+	name = Bill Hurt
+	email = william.hurt@puppet.com
+[core]
+	editor = code --wait
+	ignorecase = false
+	autocrlf = true
+[push]
+	default = simple
