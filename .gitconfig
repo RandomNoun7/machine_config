@@ -1,9 +1,14 @@
 [user]
 	name = Bill Hurt
-	email = william.hurt@puppet.com
+	email = hurt.bill@gmail.com
+	signingkey = 6F48FC9457A862CA
 [core]
 	editor = code --wait
 	ignorecase = false
 	autocrlf = true
 [push]
 	default = simple
+[commit]
+	gpgsign = true
+[gpg]
+	program = C:\\Program Files (x86)\\GNU\\GnuPG\\gpg2.exe
