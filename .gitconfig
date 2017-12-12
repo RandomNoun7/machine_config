@@ -12,3 +12,5 @@
 	gpgsign = true
 [gpg]
 	program = C:\\Program Files (x86)\\GNU\\GnuPG\\gpg2.exe
+[hub]
+	protocol = ssh
