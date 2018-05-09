@@ -1,11 +1,12 @@
 [user]
 	name = Bill Hurt
 	email = hurt.bill@gmail.com
-	signingkey = 6F48FC9457A862CA
+	signingkey = 3A73BE3BAA9E0F2B
 [core]
 	editor = code --wait
 	ignorecase = false
 	autocrlf = true
+	excludesfile = C:\\Users\\bhurt\\.gitignore
 [push]
 	default = simple
 [commit]
@@ -14,3 +15,10 @@
 	program = C:\\Program Files (x86)\\GNU\\GnuPG\\gpg2.exe
 [hub]
 	protocol = ssh
+[alias]
+	graph = log --oneline --graph --all
+	amend = commit --amend --no-edit
+[credential]
+	modalPrompt = false
+[winUpdater]
+	recentlySeenVersion = 2.17.0.windows.1
