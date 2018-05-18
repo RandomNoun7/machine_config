@@ -19,3 +19,4 @@ shd101wyy.markdown-preview-enhanced
 stkb.rewrap
 wwm.better-align
 ziyasal.vscode-open-in-github
+alefragnani.bookmarks
