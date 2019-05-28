@@ -3,7 +3,7 @@
 	email = hurt.bill@gmail.com
 	signingkey = 3A73BE3BAA9E0F2B
 [core]
-	editor = code --wait
+	editor = \"C:\\Users\\bhurt\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
 	ignorecase = false
 	autocrlf = true
 	excludesfile = C:\\Users\\bhurt\\.gitignore
@@ -16,9 +16,28 @@
 [hub]
 	protocol = ssh
 [alias]
-	graph = log --oneline --graph --all
+	graph = log --oneline --graph --all --abbrev-commit
 	amend = commit --amend --no-edit
+	ass = add
+	branchname = rev-parse --abbrev-ref HEAD
 [credential]
 	modalPrompt = false
 [winUpdater]
-	recentlySeenVersion = 2.17.0.windows.1
+	recentlySeenVersion = 2.21.0.windows.1
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	path = c:/Program Files (x86)/Beyond Compare 4/bcomp.exe
+[merge]
+	tool = bc
+[mergetool "bc3"]
+	path = c:/Program Files (x86)/Beyond Compare 4/bcomp.exe
+[mergetool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[difftool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
