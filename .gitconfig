@@ -1,37 +1,40 @@
 [user]
 	name = Bill Hurt
 	email = hurt.bill@gmail.com
-	signingkey = 3A73BE3BAA9E0F2B
+	signingkey = AFC441851615564C
 [core]
-	editor = \"C:\\Users\\bhurt\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+	editor = \"C:\\Users\\Bill Hurt\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\Code - Insiders.exe\" --wait
 	ignorecase = false
 	autocrlf = true
-	excludesfile = C:\\Users\\bhurt\\.gitignore
+	excludesfile = C:\\Users\\Bill Hurt\\.gitignore
 [push]
 	default = simple
 [commit]
 	gpgsign = true
 [gpg]
-	program = C:\\Program Files (x86)\\GNU\\GnuPG\\gpg2.exe
+	program = C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe
 [hub]
 	protocol = ssh
+[format]
+	pretty = format:%C(yellow)%h%Creset %<(50)%s %Cgreen%ae%Creset %Cblue%ad%Creset
 [alias]
-	graph = log --oneline --graph --all --abbrev-commit
+	graph = log --graph --date=short-local --pretty=format:'%C(yellow)%h%Creset %<(60)%s %Cgreen%ae%Creset %Cblue%ad%Creset'
 	amend = commit --amend --no-edit
 	ass = add
 	branchname = rev-parse --abbrev-ref HEAD
+	checkignored = ls-files --ignored --exclude-standard
 [credential]
 	modalPrompt = false
 [winUpdater]
 	recentlySeenVersion = 2.21.0.windows.1
 [diff]
-	tool = bc3
-[difftool "bc3"]
-	path = c:/Program Files (x86)/Beyond Compare 4/bcomp.exe
+	tool = vscode
+[difftool "vscode"]
+	cmd = code-insiders --wait --diff $LOCAL $REMOTE
 [merge]
-	tool = bc
-[mergetool "bc3"]
-	path = c:/Program Files (x86)/Beyond Compare 4/bcomp.exe
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code-insiders --wait $MERGED
 [mergetool "bc"]
 	path = c:/Program Files/Beyond Compare 4/bcomp.exe
 [difftool "bc"]
@@ -41,3 +44,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[log]
+	date = short-local
