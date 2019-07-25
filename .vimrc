@@ -5,39 +5,39 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 " Dependencies of snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/vim-snippets"
+Plugin "MarcWeber/vim-addon-mw-utils"
+Plugin "tomtom/tlib_vim"
+Plugin "honza/vim-snippets"
 
 " Snippets for our use :)
-Bundle 'garbas/vim-snipmate'
+Plugin 'garbas/vim-snipmate'
 
 " Git tools
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Commenting and uncommenting stuff
-Bundle 'tomtom/tcomment_vim'
+Plugin 'tomtom/tcomment_vim'
 
 " Molokai theme
-Bundle 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 
 " Vim Ruby
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 
 " Surround your code :)
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " Every one should have a pair (Autogenerate pairs for "{[( )
-Bundle 'jiangmiao/auto-pairs'
+Plugin 'jiangmiao/auto-pairs'
 
 " Tab completions
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 
 " Fuzzy finder for vim (CTRL+P)
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Navigation tree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 set autoindent " Auto indention should be on
 
