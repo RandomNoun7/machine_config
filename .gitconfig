@@ -15,14 +15,15 @@
 	program = C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe
 [hub]
 	protocol = ssh
-[format]
-	pretty = format:%C(yellow)%h%Creset %<(50)%s %Cgreen%ae%Creset %Cblue%ad%Creset
+# [format]
+# 	pretty = format:%C(yellow)%h%C(reset) %<(50,trunc)%s %C(green)%aN%C(reset) %C(blue)%ad%C(reset) %C(blue)%cr%C(reset)
 [alias]
-	graph = log --graph --date=short-local --pretty=format:'%C(yellow)%h%Creset %<(60)%s %Cgreen%ae%Creset %Cblue%ad%Creset'
+	graph = log --graph --pretty=format:'%C(yellow)%h%C(reset) - %C(green)%an%C(reset) %C(blue)(%cr)%C(reset) %C(red)%d%C(reset)%n          %s%n'
 	amend = commit --amend --no-edit
 	ass = add
 	branchname = rev-parse --abbrev-ref HEAD
 	checkignored = ls-files --ignored --exclude-standard
+	lt = log --pretty=format:'%C(yellow)%h%C(reset) - %<(50,trunc)%s %<(20,trunc)%C(green)%an%C(reset) %C(bold cyan)%ad%C(reset) %C(blue)(%cr)%C(reset) %C(red)%d%C(reset)'
 [credential]
 	modalPrompt = false
 [winUpdater]
