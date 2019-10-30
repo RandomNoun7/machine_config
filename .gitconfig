@@ -5,7 +5,7 @@
 [core]
 	editor = \"C:\\Users\\Bill Hurt\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\Code - Insiders.exe\" --wait
 	ignorecase = false
-	autocrlf = true
+	autocrlf = false
 	excludesfile = C:\\Users\\Bill Hurt\\.gitignore
 [push]
 	default = simple
@@ -18,12 +18,13 @@
 # [format]
 # 	pretty = format:%C(yellow)%h%C(reset) %<(50,trunc)%s %C(green)%aN%C(reset) %C(blue)%ad%C(reset) %C(blue)%cr%C(reset)
 [alias]
-	graph = log --graph --pretty=format:'%C(yellow)%h%C(reset) - %C(green)%an%C(reset) %C(blue)(%cr)%C(reset) %C(red)%d%C(reset)%n          %s%n'
+	graph = log --all --graph --pretty=format:'%C(yellow)%h%C(reset) - %s%n%n            %C(green)%an%C(reset) %C(blue)(%cr)%C(reset) %C(auto)%d%C(reset)%n'
 	amend = commit --amend --no-edit
 	ass = add
 	branchname = rev-parse --abbrev-ref HEAD
 	checkignored = ls-files --ignored --exclude-standard
-	lt = log --pretty=format:'%C(yellow)%h%C(reset) - %<(50,trunc)%s %<(20,trunc)%C(green)%an%C(reset) %C(bold cyan)%ad%C(reset) %C(blue)(%cr)%C(reset) %C(red)%d%C(reset)'
+	lt = log --pretty=format:'%C(yellow)%h%C(reset) - %<(50,trunc)%s %<(20,trunc)%C(green)%an%C(reset) %C(bold cyan)%ad%C(reset) %C(blue)(%cr)%C(reset)%C(auto)%d%C(reset)'
+	f = fetch --all --prune
 [credential]
 	modalPrompt = false
 [winUpdater]
@@ -47,3 +48,5 @@
 	required = true
 [log]
 	date = short-local
+[url "git@github.com:"]
+	insteadOf = https://github.com/
