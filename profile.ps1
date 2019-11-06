@@ -247,3 +247,5 @@ function b {
 }
 
 function gf { git f }
+
+function bi { bundle install --path .bundle/gems }
