@@ -23,6 +23,7 @@ $env:VAGRANT_PREFER_SYSTEM_BIN = 0
 
 Import-Module Posh-Git, NetTCPIP, NetAdapter, Emojis #, oh-my-posh # -skipEditionCheck
 # Set-Theme bill
+Import-Module Posh-Git
 $GitPromptSettings.DefaultPromptSuffix = "$('`n> ' * ($nestedPromptLevel + 1))"
 $GitPromptSettings.DefaultForegroundColor = 'yellow'
 $GitPromptSettings.BeforeForegroundColor = 'cyan'
@@ -55,7 +56,7 @@ function Get-FloatyHostname {
     process {
         foreach($hostname in $floatyHostName) {
 
-            $null = $hostname -match '\- ([\w]+\.delivery\.puppetlabs\.net)'
+            $null = $hostname -match '\- (\w+-\w+\.delivery\.puppetlabs\.net)'
 
             Write-Output $matches[1]
         }
@@ -249,3 +250,7 @@ function b {
 function gf { git f }
 
 function bi { bundle install --path .bundle/gems }
+
+function hostsfile {
+    code C:\Windows\System32\drivers\etc\hosts
+}
